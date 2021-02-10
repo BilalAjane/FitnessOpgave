@@ -1,15 +1,18 @@
 package demo;
 
-import org.w3c.dom.ls.LSOutput;
-
 public class Member extends Person{
 
     private Boolean isBasic;
 
+    public Member() {
+    }
+
     public Member(String name, String cpr, Boolean isBasic) {
-        super(name,cpr);
+        this.name = name;
+        this.cpr = cpr;
         this.isBasic = isBasic;
     }
+
 
     public Boolean isBasic() {
         return isBasic;
@@ -19,6 +22,9 @@ public class Member extends Person{
         isBasic = basic;
     }
 
+    public Boolean getBasic() {
+        return isBasic;
+    }
 
     public int monthlyFee(){
         if (isBasic){
@@ -38,7 +44,7 @@ public class Member extends Person{
 
     @Override
     public String toString() {
-        return " Name: " + name + " CPR: " + cpr + " Member Type: " + memberType() + " Monthly Fee: " + monthlyFee();
+        return " Name: " + name + ", CPR: " + cpr + ", Member Type: " + memberType() + ", Monthly Fee: " + monthlyFee();
 
     }
 }

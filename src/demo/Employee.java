@@ -2,11 +2,10 @@ package demo;
 
 public class Employee extends Person{
 
-    private int hours;
-    private int salary;
+    int hours = 0;
+    int salary = 0;
 
-    public Employee(String name, String cpr) {
-        super(name, cpr);
+    public Employee() {
     }
 
     public int getHours() {
@@ -15,5 +14,11 @@ public class Employee extends Person{
 
     public int getSalary() {
         return salary;
+    }
+
+    @Override
+    public String toString() {
+        return " Name: " + name + ", CPR: " + cpr + ", Hours: " + hours + ", Salary: " + salary + ", Vacation: ";
+
     }
 }
